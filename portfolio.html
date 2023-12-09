@@ -39,6 +39,11 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="modal-menu-open-btn js-open-menu">
+          <svg class="modal-menu-open-icon" width="32" height="22">
+            <use href="./images/sprite.svg#burger-icon"></use>
+          </svg>
+        </button>
         <address class="adress">
           <ul class="contact-list list">
             <li class="contact-item">
@@ -53,6 +58,98 @@
             </li>
           </ul>
         </address>
+        <!-- mobile-menu -->
+        <div class="mobile-menu js-menu-container">
+          <div class="container mobile-menu-container">
+            <button class="mobile-menu-close-btn js-close-menu">
+              <svg class="mobile-menu-close-icon" width="8" height="8">
+                <use href="./images/sprite.svg#mobile-menu-close-icon"></use>
+              </svg>
+            </button>
+            <ul class="mobile-header-menu-list list">
+              <li class="mobile-header-menu-item">
+                <a class="mobile-header-menu-link link" href="./index.html"
+                  >Studio</a
+                >
+              </li>
+              <li class="mobile-header-menu-item">
+                <a
+                  class="mobile-header-menu-link link active"
+                  href="./portfolio.html"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="mobile-header-menu-item link">
+                <a class="mobile-header-menu-link link" href="">Contacts</a>
+              </li>
+            </ul>
+            <address class="mobile-address">
+              <ul class="mobile-contact-list list">
+                <li class="mobile-contact-item">
+                  <a
+                    class="mobile-contact-link-tel link active"
+                    href="tel:+11(000)1111111"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="mobile-contact-item">
+                  <a
+                    class="mobile-contact-link link"
+                    href="mailto:info@devstudio.com"
+                    >info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+            </address>
+            <ul class="mobile-social-list list">
+              <li class="mobile-social-icon-item">
+                <a class="mobile-social-icon-link link" href="">
+                  <svg
+                    class="mobile-social-icon-list"
+                    width="24px"
+                    height="24px"
+                  >
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-social-icon-item">
+                <a class="mobile-social-icon-link link" href="">
+                  <svg
+                    class="mobile-social-icon-list"
+                    width="24px"
+                    height="24px"
+                  >
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-social-icon-item">
+                <a class="mobile-social-icon-link link" href="">
+                  <svg
+                    class="mobile-social-icon-list"
+                    width="24px"
+                    height="24px"
+                  >
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-social-icon-item">
+                <a class="mobile-social-icon-link link" href="">
+                  <svg
+                    class="mobile-social-icon-list"
+                    width="24px"
+                    height="24px"
+                  >
+                    <use href="./images/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- mobile-menu -->
       </div>
     </header>
     <main>
@@ -83,13 +180,61 @@
             <li class="clients-list-item">
               <a class="clients-list-link link" href="">
                 <div class="clients-list-overlay">
-                  <img
-                    class="clients-list-img"
-                    src="./images/our-clients/banking-app-interface-concept.jpg"
-                    alt="Banking App Interface Concept"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1158px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-desctop/desctop-banking-app-interface-concept.webp    1x,
+                        ./images/our-clients/our-clients-desctop/desctop-banking-app-interface-concept@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="
+                        ./images/our-clients/our-clients-desctop/desctop-banking-app-interface-concept.jpg    1x,
+                        ./images/our-clients/our-clients-desctop/desctop-banking-app-interface-concept@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-tablet/tablet-banking-app-interface-concept.webp    1x,
+                        ./images/our-clients/our-clients-tablet/tablet-banking-app-interface-concept@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/our-clients/our-clients-tablet/tablet-banking-app-interface-concept.jpg    1x,
+                        ./images/our-clients/our-clients-tablet/tablet-banking-app-interface-concept@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-mobile/mobile-banking-app-interface-concept.webp    1x,
+                        ./images/our-clients/our-clients-mobile/mobile-banking-app-interface-concept@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/our-clients/our-clients-mobile/mobile-banking-app-interface-concept.jpg    1x,
+                        ./images/our-clients/our-clients-mobile/mobile-banking-app-interface-concept@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="clients-list-img"
+                      src="./images/our-clients/our-clients-mobile/mobile-banking-app-interface-concept.jpg"
+                      alt="Banking App Interface Concept"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -107,13 +252,61 @@
             <li>
               <a class="clients-list-link link" href="">
                 <div class="clients-list-overlay">
-                  <img
-                    class="clients-list-img"
-                    src="./images/our-clients/cashless-payment.jpg"
-                    alt="Cashless Payment"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1158px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-desctop/desctop-cashless-payment.webp    1x,
+                        ./images/our-clients/our-clients-desctop/desctop-cashless-payment@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="
+                        ./images/our-clients/our-clients-desctop/desctop-cashless-payment.jpg    1x,
+                        ./images/our-clients/our-clients-desctop/desctop-cashless-payment@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-tablet/tablet-cashless-payment.webp    1x,
+                        ./images/our-clients/our-clients-tablet/tablet-cashless-payment@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/our-clients/our-clients-tablet/tablet-cashless-payment.jpg    1x,
+                        ./images/our-clients/our-clients-tablet/tablet-cashless-payment@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-mobile/mobile-cashless-payment.webp    1x,
+                        ./images/our-clients/our-clients-mobile/mobile-cashless-payment@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/our-clients/our-clients-mobile/mobile-cashless-payment.jpg    1x,
+                        ./images/our-clients/our-clients-mobile/mobile-cashless-payment@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="clients-list-img"
+                      src="./images/our-clients/our-clients-mobile/mobile-cashless-payment.jpg"
+                      alt="Cashless Payment"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -129,13 +322,61 @@
             <li>
               <a class="clients-list-link link" href="">
                 <div class="clients-list-overlay">
-                  <img
-                    class="clients-list-img"
-                    src="./images/our-clients/meditation-app.jpg"
-                    alt="Meditation App"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1158px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-desctop/desctop-meditation-app.webp    1x,
+                        ./images/our-clients/our-clients-desctop/desctop-meditation-app@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="
+                        ./images/our-clients/our-clients-desctop/desctop-meditation-app.jpg    1x,
+                        ./images/our-clients/our-clients-desctop/desctop-meditation-app@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-tablet/tablet-meditation-app.webp    1x,
+                        ./images/our-clients/our-clients-tablet/tablet-meditation-app@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/our-clients/our-clients-tablet/tablet-meditation-app.jpg    1x,
+                        ./images/our-clients/our-clients-tablet/tablet-meditation-app@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-mobile/mobile-meditation-app.webp    1x,
+                        ./images/our-clients/our-clients-mobile/mobile-meditation-app@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/our-clients/our-clients-mobile/mobile-meditation-app.jpg    1x,
+                        ./images/our-clients/our-clients-mobile/mobile-meditation-app@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="clients-list-img"
+                      src="./images/our-clients/our-clients-mobile/mobile-meditation-app.jpg"
+                      alt="Meditation App"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -151,13 +392,61 @@
             <li>
               <a class="clients-list-link link" href="">
                 <div class="clients-list-overlay">
-                  <img
-                    class="clients-list-img"
-                    src="./images/our-clients/taxi-service.jpg"
-                    alt="Taxi Service"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1158px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-desctop/desctop-taxi-service.webp    1x,
+                        ./images/our-clients/our-clients-desctop/desctop-taxi-service@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="
+                        ./images/our-clients/our-clients-desctop/desctop-taxi-service.jpg    1x,
+                        ./images/our-clients/our-clients-desctop/desctop-taxi-service@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-tablet/tablet-taxi-service.webp    1x,
+                        ./images/our-clients/our-clients-tablet/tablet-taxi-service@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/our-clients/our-clients-tablet/tablet-taxi-service.jpg    1x,
+                        ./images/our-clients/our-clients-tablet/tablet-taxi-service@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-mobile/mobile-taxi-service.webp    1x,
+                        ./images/our-clients/our-clients-mobile/mobile-taxi-service@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/our-clients/our-clients-mobile/mobile-taxi-service.jpg    1x,
+                        ./images/our-clients/our-clients-mobile/mobile-taxi-service@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="clients-list-img"
+                      src="./images/our-clients/our-clients-mobile/mobile-taxi-service.jpg"
+                      alt="Taxi Service"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -173,13 +462,61 @@
             <li>
               <a class="clients-list-link link" href="">
                 <div class="clients-list-overlay">
-                  <img
-                    class="clients-list-img"
-                    src="./images/our-clients/screen-illustrations.jpg"
-                    alt="Screen Illustrations"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1158px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-desctop/desctop-screen-illustrations.webp    1x,
+                        ./images/our-clients/our-clients-desctop/desctop-screen-illustrations@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="
+                        ./images/our-clients/our-clients-desctop/desctop-screen-illustrations.jpg    1x,
+                        ./images/our-clients/our-clients-desctop/desctop-screen-illustrations@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-tablet/tablet-screen-illustrations.webp    1x,
+                        ./images/our-clients/our-clients-tablet/tablet-screen-illustrations@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/our-clients/our-clients-tablet/tablet-screen-illustrations.jpg    1x,
+                        ./images/our-clients/our-clients-tablet/tablet-screen-illustrations@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-mobile/mobile-screen-illustrations.webp    1x,
+                        ./images/our-clients/our-clients-mobile/mobile-screen-illustrations@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/our-clients/our-clients-mobile/mobile-screen-illustrations.jpg    1x,
+                        ./images/our-clients/our-clients-mobile/mobile-screen-illustrations@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="clients-list-img"
+                      src="./images/our-clients/our-clients-mobile/mobile-screen-illustrations.jpg"
+                      alt="Screen Illustrations"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -195,13 +532,61 @@
             <li>
               <a class="clients-list-link link" href="">
                 <div class="clients-list-overlay">
-                  <img
-                    class="clients-list-img"
-                    src="./images/our-clients/online-courses.jpg"
-                    alt="Online Courses"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1158px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-desctop/desctop-online-courses.webp    1x,
+                        ./images/our-clients/our-clients-desctop/desctop-online-courses@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="
+                        ./images/our-clients/our-clients-desctop/desctop-online-courses.jpg    1x,
+                        ./images/our-clients/our-clients-desctop/desctop-online-courses@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-tablet/tablet-online-courses.webp    1x,
+                        ./images/our-clients/our-clients-tablet/tablet-online-courses@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/our-clients/our-clients-tablet/tablet-online-courses.jpg    1x,
+                        ./images/our-clients/our-clients-tablet/tablet-online-courses@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-mobile/mobile-online-courses.webp    1x,
+                        ./images/our-clients/our-clients-mobile/mobile-online-courses@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/our-clients/our-clients-mobile/mobile-online-courses.jpg    1x,
+                        ./images/our-clients/our-clients-mobile/mobile-online-courses@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="clients-list-img"
+                      src="./images/our-clients/our-clients-mobile/mobile-online-courses.jpg"
+                      alt="Online Courses"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -217,13 +602,61 @@
             <li>
               <a class="clients-list-link link" href="">
                 <div class="clients-list-overlay">
-                  <img
-                    class="clients-list-img"
-                    src="./images/our-clients/instagram-stories.jpg"
-                    alt="Instagram Stories Concept"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1158px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-desctop/desctop-instagram-stories.webp    1x,
+                        ./images/our-clients/our-clients-desctop/desctop-instagram-stories@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="
+                        ./images/our-clients/our-clients-desctop/desctop-instagram-stories.jpg    1x,
+                        ./images/our-clients/our-clients-desctop/desctop-instagram-stories@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-tablet/tablet-instagram-stories.webp    1x,
+                        ./images/our-clients/our-clients-tablet/tablet-instagram-stories@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/our-clients/our-clients-tablet/tablet-instagram-stories.jpg    1x,
+                        ./images/our-clients/our-clients-tablet/tablet-instagram-stories@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-mobile/mobile-instagram-stories.webp    1x,
+                        ./images/our-clients/our-clients-mobile/mobile-instagram-stories@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/our-clients/our-clients-mobile/mobile-instagram-stories.jpg    1x,
+                        ./images/our-clients/our-clients-mobile/mobile-instagram-stories@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="clients-list-img"
+                      src="./images/our-clients/our-clients-mobile/mobile-instagram-stories.jpg"
+                      alt="Instagram Stories Concept"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -241,13 +674,61 @@
             <li>
               <a class="clients-list-link link" href="">
                 <div class="clients-list-overlay">
-                  <img
-                    class="clients-list-img"
-                    src="./images/our-clients/organic-food.jpg"
-                    alt="Organic Food"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1158px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-desctop/desctop-organic-food.webp    1x,
+                        ./images/our-clients/our-clients-desctop/desctop-organic-food@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="
+                        ./images/our-clients/our-clients-desctop/desctop-organic-food.jpg    1x,
+                        ./images/our-clients/our-clients-desctop/desctop-organic-food@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-tablet/tablet-organic-food.webp    1x,
+                        ./images/our-clients/our-clients-tablet/tablet-organic-food@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/our-clients/our-clients-tablet/tablet-organic-food.jpg    1x,
+                        ./images/our-clients/our-clients-tablet/tablet-organic-food@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-mobile/mobile-organic-food.webp    1x,
+                        ./images/our-clients/our-clients-mobile/mobile-organic-food@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/our-clients/our-clients-mobile/mobile-organic-food.jpg    1x,
+                        ./images/our-clients/our-clients-mobile/mobile-organic-food@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="clients-list-img"
+                      src="./images/our-clients/our-clients-mobile/mobile-organic-food.jpg"
+                      alt="Organic Food"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -263,13 +744,61 @@
             <li>
               <a class="clients-list-link link" href="">
                 <div class="clients-list-overlay">
-                  <img
-                    class="clients-list-img"
-                    src="./images/our-clients/fresh-coffee.jpg"
-                    alt="Fresh Co-ffee"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1158px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-desctop/desctop-fresh-coffee.webp    1x,
+                        ./images/our-clients/our-clients-desctop/desctop-fresh-coffee@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1158px)"
+                      srcset="
+                        ./images/our-clients/our-clients-desctop/desctop-fresh-coffee.jpg    1x,
+                        ./images/our-clients/our-clients-desctop/desctop-fresh-coffee@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-tablet/tablet-fresh-coffee.webp    1x,
+                        ./images/our-clients/our-clients-tablet/tablet-fresh-coffee@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/our-clients/our-clients-tablet/tablet-fresh-coffee.jpg    1x,
+                        ./images/our-clients/our-clients-tablet/tablet-fresh-coffee@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                      srcset="
+                        ./images/our-clients/our-clients-mobile/mobile-fresh-coffee.webp    1x,
+                        ./images/our-clients/our-clients-mobile/mobile-fresh-coffee@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/our-clients/our-clients-mobile/mobile-fresh-coffee.jpg    1x,
+                        ./images/our-clients/our-clients-mobile/mobile-fresh-coffee@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="clients-list-img"
+                      src="./images/our-clients/our-clients-mobile/mobile-fresh-coffee.jpg"
+                      alt="Fresh Co-ffee"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
+
                   <p class="overlay">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
@@ -351,5 +880,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
